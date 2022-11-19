@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "./components/Card";
 import "./App.css";
 
-const cards = [];
+const initialCards = [];
 for (let i = 1; i <= 12; i++) {
   let url = `/images/char${i}`;
   if ([1, 6, 8, 11].includes(i)) {
@@ -10,7 +10,7 @@ for (let i = 1; i <= 12; i++) {
   } else {
     url += ".png";
   }
-  cards.push({ id: i, image: url });
+  initialCards.push({ id: i, image: url });
 }
 
 const shuffleArray = (arr) => {
@@ -36,6 +36,7 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [chosenCards, setChosenCards] = useState([]);
+  const [cards, setCards] = useState(initialCards);
 
   const handleClick = (cardID) => {
     if (!chosenCards.includes(cardID)) {
@@ -43,6 +44,10 @@ const App = () => {
       setScore((prevScore) => prevScore + 1);
     } else {
       setBestScore(score);
+      // Reset game
+      setScore(0);
+      setChosenCards([]);
+      // Shuffle the cards
     }
   };
 
