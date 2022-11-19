@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const cards = [];
 for (let i = 1; i <= 12; i++) {
-  let url = `./images/char${i}`;
+  let url = `/images/char${i}`;
   if ([1, 6, 8, 11].includes(i)) {
     url += ".jpg";
   } else {
