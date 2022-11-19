@@ -38,10 +38,10 @@ function App() {
   return (
     <div className="App">
       <h1>Memory Card Game</h1>
-      <p>
+      <p className="instruction">
         Get 1 point when clicking 1 card. But don't click any card more than 1
       </p>
-      <p>
+      <p className="scores">
         <span>Score: {score}</span>
         <span>Best score: {bestScore}</span>
       </p>
