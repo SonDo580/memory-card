@@ -4,7 +4,7 @@ import "./App.css";
 
 const initialCards = [];
 for (let i = 1; i <= 12; i++) {
-  let url = `./images/char${i}`;
+  let url = process.env.PUBLIC_URL + `/images/char${i}`;
   if ([1, 6, 8, 11].includes(i)) {
     url += ".jpg";
   } else {
