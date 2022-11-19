@@ -36,7 +36,7 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
 
   return (
-    <div>
+    <div className="App">
       <h1>Memory Card Game</h1>
       <p>
         Get 1 point when clicking 1 card. But don't click any card more than 1
