@@ -32,7 +32,7 @@ const shuffleArray = (arr) => {
   return arr;
 };
 
-function App() {
+const App = () => {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [chosenCards, setChosenCards] = useState([]);
@@ -66,13 +66,13 @@ function App() {
             <Card
               key={card.id}
               card={card}
-              onClick={() => handleClick(card.id)}
+              handleClick={() => handleClick(card.id)}
             />
           );
         })}
       </div>
     </div>
   );
-}
+};
 
 export default App;
