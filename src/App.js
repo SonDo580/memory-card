@@ -37,7 +37,14 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
   const [chosenCards, setChosenCards] = useState([]);
 
-  const handleClick = () => {};
+  const handleClick = (cardID) => {
+    if (!chosenCards.includes(cardID)) {
+      setChosenCards((prevChosenCards) => prevChosenCards.concat(cardID));
+      setScore((prevScore) => prevScore + 1);
+    } else {
+      setBestScore(score);
+    }
+  };
 
   return (
     <div className="App">
@@ -55,7 +62,13 @@ function App() {
       </p>
       <div className="cards">
         {cards.map((card) => {
-          return <Card card={card} onClick={handleClick} />;
+          return (
+            <Card
+              key={card.id}
+              card={card}
+              onClick={() => handleClick(card.id)}
+            />
+          );
         })}
       </div>
     </div>
