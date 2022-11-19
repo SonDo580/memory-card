@@ -48,6 +48,7 @@ const App = () => {
       setScore(0);
       setChosenCards([]);
       // Shuffle the cards
+      setCards(shuffleArray(initialCards));
     }
   };
 
