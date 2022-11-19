@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "./components/Card";
+import "./App.css";
 
 const cards = [];
 for (let i = 1; i <= 12; i++) {
