@@ -35,6 +35,7 @@ const shuffleArray = (arr) => {
 function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  const [chosenCards, setChosenCards] = useState([]);
 
   const handleClick = () => {};
 
