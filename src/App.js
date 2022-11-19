@@ -36,6 +36,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
+  const handleClick = () => {};
+
   return (
     <div className="App">
       <h1>Memory Card Game</h1>
@@ -52,7 +54,7 @@ function App() {
       </p>
       <div className="cards">
         {cards.map((card) => {
-          return <Card card={card} />;
+          return <Card card={card} onClick={handleClick} />;
         })}
       </div>
     </div>
