@@ -39,7 +39,7 @@ function App() {
 
   const handleClick = (cardID) => {
     if (!chosenCards.includes(cardID)) {
-      setChosenCards((prevChosenCards) => prevChosenCards.concat(cardID));
+      setChosenCards((prevChosenCards) => [...prevChosenCards, cardID]);
       setScore((prevScore) => prevScore + 1);
     } else {
       setBestScore(score);
