@@ -54,3 +54,22 @@
   font-size: 1.3rem;
   color: blue;
 }
+
+@media screen and (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
