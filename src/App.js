@@ -43,7 +43,10 @@ const App = () => {
       setChosenCards((prevChosenCards) => [...prevChosenCards, cardID]);
       setScore((prevScore) => prevScore + 1);
     } else {
-      setBestScore(score);
+      // Set new bestScore
+      if (score > bestScore) {
+        setBestScore(score);
+      }
       // Reset game
       setScore(0);
       setChosenCards([]);
