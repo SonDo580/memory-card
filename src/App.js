@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 
+const cards = [];
+for (let i = 0; i < 12; i++) {
+  const url = `./images/char${i}`;
+  cards.push({ id: i, image: url });
+}
+
 function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
