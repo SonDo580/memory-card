@@ -43,8 +43,12 @@ function App() {
         Get 1 point when clicking 1 card. But don't click any card more than 1
       </p>
       <p className="scores">
-        <span>Score: {score}</span>
-        <span>Best score: {bestScore}</span>
+        <span>
+          Score: <strong>{score}</strong>
+        </span>
+        <span>
+          Best score: <strong>{bestScore}</strong>
+        </span>
       </p>
       <div className="cards">
         {cards.map((card) => {
