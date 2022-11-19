@@ -47,9 +47,9 @@ const App = () => {
       // Reset game
       setScore(0);
       setChosenCards([]);
-      // Shuffle the cards
-      setCards(shuffleArray(initialCards));
     }
+    // Shuffle the cards
+    setCards(shuffleArray(initialCards));
   };
 
   return (
