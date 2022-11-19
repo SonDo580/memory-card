@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "./components/Card";
 
 const cards = [];
 for (let i = 1; i <= 12; i++) {
@@ -46,11 +47,7 @@ function App() {
       </p>
       <div className="cards">
         {cards.map((card) => {
-          return (
-            <div key={card.id}>
-              <img src={card.image} alt={`character ${card.id}`} />
-            </div>
-          );
+          return <Card card={card} />;
         })}
       </div>
     </div>
