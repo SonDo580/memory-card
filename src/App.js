@@ -2,7 +2,12 @@ import React, { useState } from "react";
 
 const cards = [];
 for (let i = 1; i <= 12; i++) {
-  const url = `./images/char${i}`;
+  let url = `./images/char${i}`;
+  if ([1, 6, 8, 11].includes(i)) {
+    url += ".jpg";
+  } else {
+    url += ".png";
+  }
   cards.push({ id: i, image: url });
 }
 
@@ -39,7 +44,15 @@ function App() {
         <span>Score: {score}</span>
         <span>Best score: {bestScore}</span>
       </p>
-      <div className="cards"></div>
+      <div className="cards">
+        {cards.map((card) => {
+          return (
+            <div key={card.id}>
+              <img src={card.image} alt={`character ${card.id}`} />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
