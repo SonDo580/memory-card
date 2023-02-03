@@ -1,6 +1,10 @@
 .App {
   background: darkgreen;
   padding: 20px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .App h1 {
@@ -31,6 +35,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .card {
