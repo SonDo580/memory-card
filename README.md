@@ -1,3 +1,17 @@
 # Memory Card
 
-In this game, there's 12 cards that you choose from. You can select each card only once. If you select any card twice, your score will be reset to 0.
+- There are 12 cards for you to choose from.
+- You can select each card only once.
+- If you click on any card twice, the game will be reset.
+
+# Live Preview
+
+https://SonDo580.github.io/memory-card
+
+# Features
+
+- Shuffle cards after each click
+- Increase score
+- Set best score
+
+# Technology: ReactJS
