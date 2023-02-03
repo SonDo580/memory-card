@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "./components/Card";
 import "./App.css";
 
@@ -24,7 +24,7 @@ const shuffleArray = (arr) => {
     [arr[currentIndex], arr[randomIndex]] = [
       arr[randomIndex],
       arr[currentIndex],
-    ]; // Use destructuring assignment
+    ];
 
     currentIndex--;
   }
@@ -47,10 +47,12 @@ const App = () => {
       if (score > bestScore) {
         setBestScore(score);
       }
+
       // Reset game
       setScore(0);
       setChosenCards([]);
     }
+
     // Shuffle the cards
     setCards(shuffleArray(initialCards));
   };
